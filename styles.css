@@ -1,0 +1,425 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  --nebula-blue: #2e62a6;
+  --norfolk-sky: #6db4f2;
+  --light-shimmer: #a7d5f2;
+  --tangerine: #f28705;
+  --taisha-brown: #bf5b21;
+
+  font-family: "League Spartan", Century Gothic, CenturyGothic, AppleGothic,
+    sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+
+  color: #111;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Bodoni Moda", "Bodoni MT", "Noto Serif Display",
+    "URW Palladio L", serif;
+  font-weight: 500;
+
+  color: var(--nebula-blue);
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h1 > a {
+  text-decoration: none;
+  color: var(--nebula-blue);
+}
+
+h1 > a:hover {
+  color: var(--norfolk-sky);
+}
+
+h2 {
+  font-size: 3rem;
+  margin: 2rem auto;
+}
+
+h3 {
+  font-size: 2rem;
+  margin: 1rem auto;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header,
+main,
+footer {
+  width: 1440px;
+}
+
+header {
+  padding: 1rem auto;
+}
+header img {
+  box-shadow: 0px 2px 3px var(--nebula-blue);
+}
+header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+  margin-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 6rem;
+  list-style: none;
+}
+nav a {
+  font-size: 2rem;
+  color: #111;
+  text-decoration: none;
+}
+nav a:hover {
+  color: var(--light-shimmer);
+}
+nav a:focus {
+  border: 1px solid var(--nebula-blue);
+}
+.active-page {
+  color: var(--nebula-blue);
+  border-bottom: 3px solid var(--tangerine);
+}
+
+img {
+  border-radius: 3px;
+}
+
+main {
+  min-height: 1000px;
+}
+#main-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  padding: 2rem 1rem;
+
+  font-size: 1.2rem;
+}
+
+#main-home > p {
+  max-width: 80ch;
+}
+
+#main-home > section {
+  width: 70%;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: center;
+
+  margin: 2rem 1rem;
+  padding: 1rem;
+
+  border-radius: 3px;
+
+  background-color: #c0c0c01c;
+}
+
+#main-home > section > img {
+  grid-column: 1 / 1;
+  grid-row: 1 / -1;
+
+  box-shadow: 1px 1px 3px var(--nebula-blue);
+}
+
+#main-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#main-contact > h2 {
+  margin: 2rem auto 1rem auto;
+}
+#main-contact > p {
+  font-size: 1.2rem;
+  margin: 0.25rem auto 1rem auto;
+  max-width: 50ch;
+}
+
+#main-contact > img {
+  margin: 2rem auto;
+  box-shadow: 1px 1px 4px var(--nebula-blue);
+}
+
+form {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 0.5fr;
+  max-width: 710px;
+  margin: 1rem;
+  padding: 1rem;
+
+  column-gap: 1rem;
+  row-gap: 0.1rem;
+}
+form label {
+  font-size: 1.6rem;
+}
+form input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--nebula-blue);
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px var(--light-shimmer);
+}
+#inp-name {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0.1rem;
+
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+#inp-email {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+
+  grid-column: 1 / 2;
+  grid-row: 2/ 3;
+}
+#inp-phone {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+
+  grid-column: 1 / 2;
+  grid-row: 3/ 4;
+}
+fieldset {
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  padding: 0.5rem;
+  border: 2px solid var(--nebula-blue);
+}
+fieldset label {
+  font-size: 1.6rem;
+}
+fieldset div {
+  display: flex;
+}
+legend {
+  font-size: 1.8rem;
+  padding: 0.5rem;
+  background-color: var(--nebula-blue);
+  color: #fefefe;
+}
+#comments-div {
+  grid-column: 2 / -1;
+  grid-row: 2 / 4;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 1rem auto;
+}
+textarea {
+  grid-column: 2 / -1;
+  height: 100%;
+  padding: 1rem;
+
+  border: 1px solid var(--tangerine);
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px var(--taisha-brown);
+}
+input[type="submit"] {
+  grid-column: 2 / -1;
+  grid-row: 4/-1;
+  padding: 1rem;
+  width: 100%;
+
+  background-color: var(--tangerine);
+  color: #fefefe;
+
+  border: 1px solid var(--taisha-brown);
+  box-shadow: 1px 1px 1px var(--tangerine);
+}
+input[type="submit"]:hover {
+  background-color: var(--taisha-brown);
+  border-color: var(--tangerine);
+  box-shadow: 3px 3px 3px var(--taisha-brown);
+  cursor: pointer;
+}
+
+input[type="submit"]:focus {
+  background-color: var(--nebula-blue);
+  border-color: var(--norfolk-sky);
+  box-shadow: 3px 3px 3px var(--nebula-blue);
+  cursor: pointer;
+}
+
+#required {
+  color: var(--tangerine);
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 200px;
+  padding: 2rem;
+
+  background-color: var(--nebula-blue);
+  color: #fefefe;
+  font-size: 1.6rem;
+}
+footer p {
+  margin: 0.5rem;
+}
